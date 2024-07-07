@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+}
+
+.parent-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 80%;
+    margin: 15rem auto;
+    
+}
+
+svg {
+    
+    
+}
+
+/* all sections affected */
+.sedans, .suvs, .luxury {
+    color: white;
+    display: grid;
+    grid-template-rows: 4rem 3rem minmax(10rem, max-content) 7rem;
+    padding: 2rem 2rem;
+    gap: 1.5rem;
+    padding-right: 5rem;
+    line-height: 1.5rem;
+}
+
+/* all buttons affected */
+.sedans button, .suvs button, .luxury button {
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    padding: 0.8rem 2rem;
+    align-self: start;
+    justify-self: start;
+}
+/* sedans section */
+.sedans {
+    background-color: hsl(39, 97%, 46%);
+}
+
+.sedans button {
+    color: orange;
+    display: block;
+    margin-top: 4rem;
+}
+
+/* all subheadings affected */
+.sedans h2, .suvs h2, .luxury h2 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* all paragraphs affected */
+.sedans p, .suvs p, .luxury p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: "Lexend Deca", sans-serif;
+    
+}
+
+/* SUV section */
+.suvs {
+    background-color: hsl(180, 95%, 24%);
+}
+
+.suvs button {
+    color: hsl(180, 95%, 24%);
+    display: block;
+    margin-top: 4rem;
+}
+
+/* Luxury section */
+.luxury {
+    background-color: hsl(180, 80%, 12%);
+}
+
+.luxury button {
+    color: hsl(180, 80%, 12%);
+    display: block;
+    margin-top: 4rem;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1071px) {
+    .sedans, .suvs, .luxury {
+        grid-template-rows: 4rem 3rem minmax(15rem, max-content) 7rem;
+        padding-right: 3rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .parent-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .sedans, .suvs, .luxury {
+        grid-template-rows: 4rem 3rem minmax(5rem, max-content) 7rem;
+        padding-right: 3rem;
+    }
+}
